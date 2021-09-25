@@ -70,3 +70,25 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+function blongToGryffindor(hogwarts) {
+  hogwarts.forEach(({ firstName, lastName, house }) => {
+    if (house === "Gryffindor") {
+      console.log(`${firstName} ${lastName}`);
+    }
+  });
+}
+
+function teachersOwnPet(hogwarts) {
+  hogwarts.forEach(({ firstName, lastName, occupation, pet }) => {
+    if (occupation === "Teacher" && pet !== null) {
+      console.log(`${firstName} ${lastName}`);
+    }
+  });
+}
+
+console.log("***************\n", "People who belong to the Gryffindor:");
+blongToGryffindor(hogwarts);
+
+console.log("***************\n", "Teachers who own pet:");
+teachersOwnPet(hogwarts);
